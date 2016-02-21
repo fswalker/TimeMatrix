@@ -9,6 +9,9 @@ open Suave.Web             // for config
 open Suave.Filters
 open Suave.Operators
 
+#load "code/pages/home.fs"
+open TimeMatrix.Pages
+
 DotLiquid.setTemplatesDir (__SOURCE_DIRECTORY__ + "/web/views")
 
 /// Browse static files in the 'web' subfolder
@@ -16,15 +19,8 @@ let browseStaticFiles ctx = async {
   let root = Path.Combine(ctx.runtime.homeDirectory, "web")
   return! Files.browse root ctx }
 
-
-let homePage = DotLiquid.page "index.html" None
-
-let webPart = path "/" >=> homePage //request (fun r -> homePage)
-
-let home = OK "Hello F#!"
-
 let app =
   choose [
-    webPart
+    Home.webPart
     browseStaticFiles
   ]
