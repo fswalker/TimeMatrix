@@ -6,6 +6,6 @@ open Suave.Filters
 open Suave.Operators
 
 //TODO model for homepage
-let homePage = DotLiquid.page "index.html" None
+let homePage = DotLiquid.page "home.html" None
 
 let webPart = path "/" >=> homePage
