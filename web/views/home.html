@@ -1,10 +1,102 @@
 {% extends "index.html" %}
 {% block head %}
   <title>TimeMatrix</title>
+  <link href="css/jumbotron.css" type="text/css" rel="stylesheet">
+  <link href="css/home.css" type="text/css" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-<h1>Time Matrix</h1>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Time Matrix</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <p><a class="btn btn-primary btn-lg" href="/new" role="button">New task</a></p>
+    </div>
+  </div>
+
+  <div class="container matrix-container">
+    <div class="row matrix-row">
+      <div class="col-md-6 matrix-cell important urgent">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">1. Important &amp; Urgent</h3>
+          </div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 matrix-cell important">
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <h3 class="panel-title">2. Important &amp; Not Urgent</h3>
+          </div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Morbi leo risus</li>
+            </ul>
+          </div>
+        </div>
+     </div>
+    </div>
+
+    <div class="row matrix-row">
+      <div class="col-md-6 matrix-cell urgent">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">3. Not Important &amp; Urgent</h3>
+          </div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <li class="list-group-item">Cras justo odio</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 matrix-cell">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title">4. Not Important &amp; Not Urgent</h3>
+          </div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Morbi leo risus</li>
+              <li class="list-group-item">Porta ac consectetur ac</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+          </div>
+        </div>
+     </div>
+    </div>
+
+    <hr>
+    <footer>
+      <p>&copy; 2016 TimeMatrix</p>
+    </footer>
+
+  </div> <!-- /container -->
+
 {% endblock %}
 
 {% block customPageScripts %}

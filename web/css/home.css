@@ -1,0 +1,49 @@
+.container.matrix-container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.row.matrix-row {
+  margin: 0;
+}
+
+.matrix-cell .panel-heading .panel-title {
+  font-size: 24px;
+}
+
+.matrix-cell .panel-body {
+  padding: 0;
+}
+
+.matrix-cell .panel-body .list-group {
+  margin: 0;
+}
+
+.matrix-cell .panel-body .list-group .list-group-item {
+  background: transparent;
+  margin-bottom: 0;
+  border-radius: 0;
+  border-width: 0 0 1px 0;
+}
+
+.matrix-cell .panel-body .list-group .list-group-item:last-child {
+  border: 0;
+}
+
+/* List items border colors */
+.panel-danger .list-group-item {
+  border-color: #ebccd1;
+}
+
+.panel-warning .list-group-item {
+  border-color: #faebcc;
+}
+
+.panel-info .list-group-item {
+  border-color: #bce8f1;
+}
+
+.panel-succes .list-group-item {
+  border-color: #d6e9c6;
+}
+/* End List items border colors */
