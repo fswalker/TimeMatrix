@@ -9,8 +9,6 @@ let newPage = DotLiquid.page "new.html" None
 
 let addNewTask = request (fun request ->
     printfn "new task %A" request
-    Successful.OK "OK"
-    >=>
     Redirection.FOUND "/" )
 
 let webPart =
