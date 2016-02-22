@@ -24,7 +24,7 @@ let private createMatrixModel () =
     ImportantNotUrgent = todos |> List.filter (fun t -> isImportant t && not << isUrgent <| t)
     NotImportantUrgent = todos |> List.filter (fun t -> not << isImportant <| t && isUrgent t)
     NotImportantNotUrgent = todos |> List.filter (fun t -> not << isImportant <| t && not << isUrgent <| t)
-  }
+  } |> ignore
   todos
 
 let homePage = request (fun r ->

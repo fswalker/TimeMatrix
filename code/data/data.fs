@@ -30,12 +30,12 @@ let mutable todos : ToDo list = [
 let getToDoList() =
   todos
 
-let createTask title important urgent ready = {
+let createToDo title important urgent ready = {
   Title = title
   Important = important
   Urgent = urgent
   Completed = ready
 }
 
-let addTodo todo =
+let addToDo todo =
   todos <- todo :: todos
