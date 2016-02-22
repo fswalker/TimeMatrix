@@ -10,6 +10,7 @@ open Suave.Filters
 open Suave.Operators
 
 #load "code/pages/home.fs"
+#load "code/pages/new.fs"
 open TimeMatrix.Pages
 
 DotLiquid.setTemplatesDir (__SOURCE_DIRECTORY__ + "/web/views")
@@ -22,5 +23,6 @@ let browseStaticFiles ctx = async {
 let app =
   choose [
     Home.webPart
+    New.webPart
     browseStaticFiles
   ]

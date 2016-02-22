@@ -1,0 +1,61 @@
+{% extends "index.html" %}
+{% block head %}
+  <title>TimeMatrix | Add new task</title>
+  <link href="css/jumbotron.css" type="text/css" rel="stylesheet">
+  <link href="css/new.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Time Matrix</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+
+        <h2>Add new task</h2>
+
+        <form name="new_task" id="new_task" method="post" action="/new">
+          <div class="form-group">
+            <label for="title" class="h4">Title</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="My new task">
+          </div>
+          <div class="form-group">
+            <h4>Priority</h4>
+            <label for="important">
+              <input name="important" id="important" type="checkbox"> Important
+            </label>
+            <br>
+            <label for="urgent">
+              <input name="urgent" id="urgent" type="checkbox"> Urgent
+            </label>
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
+     </div>
+    </div>
+
+    <hr>
+    <footer>
+      <p>&copy; 2016 TimeMatrix</p>
+    </footer>
+
+  </div> <!-- /container -->
+
+{% endblock %}
+
+{% block customPageScripts %}
+{% endblock %}
