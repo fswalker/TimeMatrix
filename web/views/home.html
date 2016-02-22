@@ -37,18 +37,11 @@
           </div>
           <div class="panel-body">
             <ul class="list-group">
-              <li class="list-group-item">
-                <span class="h4">
-                  <input type="checkbox" />
-                  Cras justo odio
-                </span>
-              </li>
-              <li class="list-group-item done">
-                <span class="h4">
-                  <input type="checkbox" checked="checked" />
-                  Vestibulum at eros
-                </span>
-              </li>
+              {% for todo in model %}
+                {% if todo.Important and todo.Urgent %}
+                  {% include "todo.html" item:todo %}
+                {% endif %}
+              {% endfor %}
             </ul>
           </div>
         </div>
@@ -60,9 +53,11 @@
           </div>
           <div class="panel-body">
             <ul class="list-group">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Morbi leo risus</li>
+              {% for todo in model %}
+                {% if todo.Important and todo.Urgent == false %}
+                  {% include "todo.html" item:todo %}
+                {% endif %}
+              {% endfor %}
             </ul>
           </div>
         </div>
@@ -77,7 +72,11 @@
           </div>
           <div class="panel-body">
             <ul class="list-group">
-              <li class="list-group-item">Cras justo odio</li>
+              {% for todo in model %}
+                {% if todo.Important == false and todo.Urgent %}
+                  {% include "todo.html" item:todo %}
+                {% endif %}
+              {% endfor %}
             </ul>
           </div>
         </div>
@@ -89,11 +88,11 @@
           </div>
           <div class="panel-body">
             <ul class="list-group">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Morbi leo risus</li>
-              <li class="list-group-item">Porta ac consectetur ac</li>
-              <li class="list-group-item">Vestibulum at eros</li>
+              {% for todo in model %}
+                {% if todo.Important == false and todo.Urgent == false %}
+                  {% include "todo.html" item:todo %}
+                {% endif %}
+              {% endfor %}
             </ul>
           </div>
         </div>

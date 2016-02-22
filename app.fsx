@@ -9,6 +9,7 @@ open Suave.Web             // for config
 open Suave.Filters
 open Suave.Operators
 
+#load "code/data/data.fs"
 #load "code/pages/home.fs"
 #load "code/pages/new.fs"
 open TimeMatrix.Pages

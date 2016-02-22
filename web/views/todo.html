@@ -1,0 +1,15 @@
+{% if item.Completed %}
+  <li class="list-group-item done">
+    <span class="h4">
+      <input type="checkbox" checked="checked" />
+      {{item.Title}}
+    </span>
+  </li>
+{% else %}
+  <li class="list-group-item">
+    <span class="h4">
+      <input type="checkbox" />
+      {{item.Title}}
+    </span>
+  </li>
+{% endif %}
